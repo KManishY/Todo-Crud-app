@@ -1,5 +1,8 @@
 import axios from "axios";
 import {
+	ADD_TASK_COMPLETED,
+	ADD_TASK_PROGRESS,
+	ADD_TASK_TODO,
 	GET_TASK_FAILURE,
 	GET_TASK_LOADING,
 	GET_TASK_SUCCESS,
@@ -15,4 +18,15 @@ export const getTask = () => (dispatch) => {
 		.catch((error) => {
 			dispatch({ type: GET_TASK_FAILURE });
 		});
+};
+
+export const addTodo = (payload) => (dispatch) => {
+	dispatch({ type: ADD_TASK_TODO, payload });
+};
+export const addProgress = (payload) => (dispatch) => {
+	dispatch({ type: ADD_TASK_PROGRESS, payload });
+};
+export const addCompleted = (payload) => (dispatch) => {
+	// console.log("payload: ", payload);
+	dispatch({ type: ADD_TASK_COMPLETED, payload });
 };

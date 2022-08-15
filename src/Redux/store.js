@@ -7,12 +7,14 @@ import {
 
 import thunk from "redux-thunk";
 
-import { reducer as appReducer } from "./AppReducer/reducer";
+import { reducer } from "./AppReducer/reducer";
+import { arrReducer } from "./AppReducer/reducer";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-	appReducer,
+	reducer,
+	arrReducer,
 });
 
 export const store = legacy_createStore(
