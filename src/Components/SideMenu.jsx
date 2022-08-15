@@ -6,9 +6,13 @@ const SideMenu = () => {
 		<div>
 			<h1>SideMenu</h1>
 			<div className="sideMenu_container">
-				<div>UserDetails</div>
+				<div>
+					<h3>UserDetails</h3>
+				</div>
 				<div>Filter</div>
-				<div>Login/Logout</div>
+				<div>
+					<button>Logout</button>
+				</div>
 			</div>
 		</div>
 	);

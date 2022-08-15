@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import SideMenu from "../Components/SideMenu.jsx";
+import TaskCard from "../Components/TaskCard.jsx";
 import {
 	addCompleted,
 	addProgress,
@@ -14,9 +15,6 @@ const Home = () => {
 	// console.log("store: ", store);
 	const { tasks } = store.reducer;
 	const { complete, inprogress, todo } = store.arrReducer;
-	console.log("todo: ", todo);
-	console.log("inprogress: ", inprogress);
-	console.log("complete: ", complete);
 
 	const filterData = () => {
 		tasks?.map((task) => {
@@ -49,17 +47,27 @@ const Home = () => {
 
 	return (
 		<GridContainer>
-			<GridItem>
+			<GridItem style={{ height: "600px" }}>
 				<SideMenu />
 			</GridItem>
 			<GridItem>
 				Todo
 				{todo.map((e) => {
-					return <div key={e.id}>{e.title}</div>;
+					return <TaskCard key={e.id} e={e} />;
 				})}
 			</GridItem>
-			<GridItem>Progress</GridItem>
-			<GridItem>Completed</GridItem>
+			<GridItem>
+				Progress
+				{inprogress.map((e) => {
+					return <TaskCard key={e.id} e={e} />;
+				})}
+			</GridItem>
+			<GridItem>
+				Completed
+				{complete.map((e) => {
+					return <TaskCard key={e.id} e={e} />;
+				})}
+			</GridItem>
 		</GridContainer>
 	);
 };
@@ -74,6 +82,5 @@ const GridContainer = styled.div`
 	grid-template-columns: 0.2fr 0.3fr 0.3fr 0.3fr;
 `;
 const GridItem = styled.div`
-	height: 500px;
 	border: 2px solid red;
 `;
