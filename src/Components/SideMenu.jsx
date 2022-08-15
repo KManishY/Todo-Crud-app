@@ -7,9 +7,11 @@ const SideMenu = () => {
 			<h1>SideMenu</h1>
 			<div className="sideMenu_container">
 				<div>
-					<h3>UserDetails</h3>
+					<h4>UserDetails</h4>
 				</div>
-				<div>Filter</div>
+				<div>
+					<h4>Filter</h4>
+				</div>
 				<div>
 					<button>Logout</button>
 				</div>

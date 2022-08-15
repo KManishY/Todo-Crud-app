@@ -2,10 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const TaskCard = ({ e }) => {
-	// console.log("e: ", e);
 	const { id, title, description, tags, subTasks } = e;
-
-	// console.log("subTasks: ", subTasks);
 	return (
 		<Container key={e.id}>
 			<FlexDiv>
@@ -16,7 +13,7 @@ const TaskCard = ({ e }) => {
 			<p>{description}</p>
 			<div>
 				{subTasks?.map((e, i) => (
-					<div key={e.subTaskTitle}>
+					<div key={e.id}>
 						<FlexDiv>
 							<input
 								type="checkbox"
@@ -41,5 +38,7 @@ const Container = styled.div`
 `;
 const FlexDiv = styled.div`
 	display: flex;
-	justify-content: space-around;
+	padding-left: 20px;
+	padding-right: 20px;
+	justify-content: space-between;
 `;
