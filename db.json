@@ -1,55 +1,82 @@
 {
-	"todos": [
+	"tasks": [
 		{
 			"id": 1,
-			"title": "Learn DSA",
-			"description": "Learn DSA from Microsoft wali didi",
-
-			"tags": ["Official"],
+			"title": "Hello world",
+			"description": "description for hello world",
+			"task_status": "done",
+			"tags": ["Others"],
 			"subTasks": [
 				{
-					"subTaskTitle": "Tree",
-					"status": false
-				},
-				{
-					"subTaskTitle": "Recursion",
+					"subTaskTitle": "Hello world",
 					"status": false
 				}
 			]
 		},
 		{
 			"id": 2,
-			"title": "Learn Coding",
-			"description": "learn coding from code with harry",
-
-			"tags": ["Official"],
+			"title": "Task 2",
+			"description": "description for Task 2",
+			"task_status": "done",
+			"tags": ["Personal"],
 			"subTasks": [
 				{
-					"subTaskTitle": "Routing",
-					"status": false
+					"subTaskTitle": "Task2: Sub Task 1",
+					"status": true
 				},
 				{
-					"subTaskTitle": "redux",
-					"status": true
+					"subTaskTitle": "Task2: Sub Task 2",
+					"status": false
 				}
 			]
 		},
 		{
 			"id": 3,
-			"title": "mac",
-			"description": "Prepration for interview",
-			"task_status": "done",
+			"title": "Task 3",
+			"description": "description for Task 3",
+			"task_status": "todo",
 			"tags": ["Official"],
 			"subTasks": [
 				{
-					"subTaskTitle": "Portfolio",
+					"subTaskTitle": "Task3: Sub Task 1",
+					"status": false
+				},
+				{
+					"subTaskTitle": "Task3: Sub Task 2",
+					"status": false
+				}
+			]
+		},
+		{
+			"id": 4,
+			"title": "Task 4",
+			"description": "description for Task 4",
+			"task_status": "in-progress",
+			"tags": ["Others"],
+			"subTasks": [
+				{
+					"subTaskTitle": "Task4: Sub Task 1",
 					"status": true
 				},
 				{
-					"subTaskTitle": "Resume",
-					"status": true
+					"subTaskTitle": "Task4: Sub Task 2",
+					"status": false
 				}
 			]
+		}
+	],
+	"tagList": [
+		{
+			"id": 1,
+			"tag": "Personal"
+		},
+		{
+			"id": 2,
+			"tag": "Official"
+		},
+		{
+			"id": 3,
+			"tag": "Others"
 		}
 	]
 }
